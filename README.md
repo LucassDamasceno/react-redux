@@ -14,7 +14,7 @@
     no botão enviar os valores desses inputs são enviados para o componente Resultado onde ele<br>
     exibe o  mesmo nome e sobrenome.
 </p>
-<p align="center">
+<p>
   <a href="https://react-redux-five.vercel.app/" target="blank">
     <img src="./screenshots/imagem.png" width="1000" alt="Nest Logo" >
   </a>
