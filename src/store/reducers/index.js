@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import course from './course'
+import formulario from './formulario'
 
 export default combineReducers({
-    course
+    formulario,
 })

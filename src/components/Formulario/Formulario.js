@@ -1,19 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Formulario.css'
-import { InputGroup, Input, Card } from 'reactstrap';
+import { Input, Card, Button } from 'reactstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as FormActions from '../../store/actions/formulario'
 
-const Formulario = () => (
-    <div className="formulario">
-        <div className="compTitulo"><span>Componente 1</span></div>
-        <div className='divCard'>
-            <Card className="card">
-                <h1>Formulário</h1>
-                <Input placeholder='Nome'></Input>
-                <Input placeholder='Sobrenome'></Input>
-            </Card>
+const Formulario = ({ state, enviar }) => {
+    const [nome, setNome] = useState('Marcos')
+    const [sobrenome, setSobrenome] = useState('Sousa')
+
+    return (
+        <div className="formulario">
+            <div className="compTitulo"><span>Componente 1</span></div>
+            <div className='divCard'>
+                <Card className="card">
+                    <h1>Formulário</h1>
+                    <Input
+                        placeholder='Nome'
+                        className="mt-2"
+                        value={nome}
+                        onChange={event => setNome(event.target.value)}>
+                    </Input>
+                    <Input
+                        placeholder='Sobrenome'
+                        className="mt-2"
+                        value={sobrenome}
+                        onChange={event => setSobrenome(event.target.value)}>
+                    </Input>
+                    <Button className="mt-4" onClick={() => enviar(nome, sobrenome)}>Enviar</Button>
+                </Card>
+            </div>
         </div>
+    )
+}
 
-    </div>
+
+const mapStateToProps = state => ({
+    state: state.formulario
+})
+
+const mapDispatchToProps = dispatch => (
+    bindActionCreators(FormActions, dispatch)
 )
-
-export default Formulario;
+export default connect(mapStateToProps, mapDispatchToProps)(Formulario);
