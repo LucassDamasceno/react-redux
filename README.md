@@ -16,6 +16,6 @@
 </p>
 <p align="center">
   <a href="https://react-redux-five.vercel.app/" target="blank">
-    <img src="./screenshots/imagem.png" width="500" alt="Nest Logo" >
+    <img src="./screenshots/imagem.png" width="1000" alt="Nest Logo" >
   </a>
 </p>
