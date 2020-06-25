@@ -16,6 +16,11 @@ h1 {
     margin: 0;
 }
 
+.titulo {
+    margin-bottom: 20px;
+    color: #0cb3bb
+}
+
 .card {
     width: 500px;
     padding: 20px;

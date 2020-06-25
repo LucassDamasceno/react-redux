@@ -14,16 +14,16 @@ const Formulario = ({ state, enviar }) => {
             <div className="compTitulo"><span>Componente 1</span></div>
             <div className='divCard'>
                 <Card className="card">
-                    <h1>Formulário</h1>
-                    <Input
+                    <h1 className="titulo">Formulário</h1>
+                    <Input  
                         placeholder='Nome'
-                        className="mt-2"
+                        className="input"
                         value={nome}
                         onChange={event => setNome(event.target.value)}>
                     </Input>
                     <Input
                         placeholder='Sobrenome'
-                        className="mt-2"
+                        className="input"
                         value={sobrenome}
                         onChange={event => setSobrenome(event.target.value)}>
                     </Input>
