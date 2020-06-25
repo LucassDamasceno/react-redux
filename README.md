@@ -7,7 +7,7 @@
     <ul>
         <li>Formulário</li>
         <li>Resultado</li>
-    <ul><br>
+    </ul><br>
 </p>
 <p>
     No componente formulário existe dois campos onde se nome e sobrenome. Em seguida ao clicar<br>
